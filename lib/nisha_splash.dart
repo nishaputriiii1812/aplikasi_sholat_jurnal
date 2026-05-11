@@ -16,7 +16,7 @@ class _NishaSplashScreenState extends State<NishaSplash> {
   @override
   void initState() {
     n = Timer.periodic(
-      const Duration(seconds: 4),
+      const Duration(seconds: 10),
           (timer) => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => NishaLogin()),
@@ -37,7 +37,7 @@ class _NishaSplashScreenState extends State<NishaSplash> {
         height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/"),
+            image: AssetImage("assets/images/download (15).jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -45,13 +45,22 @@ class _NishaSplashScreenState extends State<NishaSplash> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "MY LOVE APP",
+              "SELAMAT DATANG",
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
               ),
             ),
+            Text(
+              "DI JURNAL SHOLAT",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Image(image: AssetImage('assets/images/ download (16) . jpg')),
             SizedBox(height: 100,),
             Text(
               "Devoled by",
@@ -61,7 +70,6 @@ class _NishaSplashScreenState extends State<NishaSplash> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-
             Text(
               "NISHA",
               style: TextStyle(
