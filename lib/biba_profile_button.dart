@@ -1,3 +1,4 @@
+import 'package:aplikasi_sholat_jurnal/biba_profile_page.dart';
 import 'package:flutter/material.dart';
 
 class BibaProfileButton extends StatelessWidget {
@@ -6,35 +7,40 @@ class BibaProfileButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        ClipOval(
-          child: Image.asset(
-            'assets/images/',
-            width: 50,
-            height: 50,
-            fit: BoxFit.cover,
-          ),
-        ),
-        SizedBox(width: 10),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        Row(
           children: [
-            Text(
-              'biba',
-              style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+            ClipOval(
+              child: Image.asset(
+                'assets/images/chlu.png',
+                width: 100,
+                height: 100,
+                fit: BoxFit.cover,
+              ),
             ),
-            Text('biba23@gmail.com'),
+            SizedBox(width: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [Text("Nisha"), Text("nishaaputrii20gmail.com")],
+            ),
           ],
         ),
         ElevatedButton(
-          onPressed: () {},
           style: ButtonStyle(
-            backgroundColor: WidgetStatePropertyAll(Colors.indigo),
-            fixedSize: WidgetStatePropertyAll(
+            backgroundColor: WidgetStatePropertyAll(Colors.blue),
+            fixedSize: WidgetStatePropertyAll(Size(100, 35)),
+            shape: WidgetStatePropertyAll(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             ),
           ),
-          child: Text('profil', style: TextStyle(color: Colors.white)),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => BibaProfilePage()),
+            );
+          },
+          child: Text("Masuk"),
         ),
       ],
     );
