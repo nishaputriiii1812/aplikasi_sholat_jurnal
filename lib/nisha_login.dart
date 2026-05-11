@@ -2,7 +2,6 @@ import 'package:aplikasi_sholat_jurnal/nisha_register.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class NishaLogin extends StatefulWidget {
   const NishaLogin({super.key});
 
@@ -43,7 +42,7 @@ class _NishaLoginState extends State<NishaLogin> {
         child: Container(
           width: double.infinity,
           height: double.infinity,
-          padding:  EdgeInsets.all(20),
+          padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: Colors.grey.withValues(alpha: 0.6),
             borderRadius: BorderRadius.circular(10),
@@ -77,8 +76,7 @@ class _NishaLoginState extends State<NishaLogin> {
                     hintText: "Username",
                     labelText: 'Username',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20
-                      ),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     prefix: Icon(Icons.person, color: Colors.teal),
                   ),
@@ -94,8 +92,7 @@ class _NishaLoginState extends State<NishaLogin> {
                     hintText: "password",
                     labelText: 'password kamu',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20
-                      ),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     prefix: Icon(Icons.lock, color: Colors.teal),
                     suffix: IconButton(onPressed: isSecure, icon: Icon(_icon)),
@@ -109,16 +106,15 @@ class _NishaLoginState extends State<NishaLogin> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => NishaRegister()),
-
+                          MaterialPageRoute(
+                            builder: (context) => NishaRegister(),
+                          ),
                         );
                       },
-                      child:  Text('DAFTAR'),
+                      child: Text('DAFTAR'),
                     ),
-
-
                   ],
-                )
+                ),
               ],
             ),
           ),

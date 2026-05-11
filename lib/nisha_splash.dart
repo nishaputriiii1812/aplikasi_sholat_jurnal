@@ -37,7 +37,7 @@ class _NishaSplashScreenState extends State<NishaSplash> {
         height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/gamabar.jpg"),
+            image: AssetImage("assets/images/"),
             fit: BoxFit.cover,
           ),
         ),
