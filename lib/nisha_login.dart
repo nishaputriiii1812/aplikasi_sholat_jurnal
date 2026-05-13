@@ -1,4 +1,5 @@
 import 'package:aplikasi_sholat_jurnal/nisha_register.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -112,6 +113,18 @@ class _NishaLoginState extends State<NishaLogin> {
                         );
                       },
                       child: Text('DAFTAR'),
+                    ),
+
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TakimHome(),
+                          ),
+                        );
+                      },
+                      child: Text('MASUK'),
                     ),
                   ],
                 ),
