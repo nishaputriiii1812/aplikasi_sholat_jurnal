@@ -63,7 +63,7 @@ class _NishaSplashScreenState extends State<NishaSplash> {
               SizedBox(height: 150),
               ClipOval(
                 child: Image.asset(
-                  'assets/images/download(17).jpg',
+                  'assets/images/download (17).jpg',
                   height: 200,
                   width: 200,
                   fit: BoxFit.cover,

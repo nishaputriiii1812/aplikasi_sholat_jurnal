@@ -62,7 +62,7 @@ class _NishaLoginState extends State<NishaLogin> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "MY LOVE APP",
+                  "LOGIN",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
