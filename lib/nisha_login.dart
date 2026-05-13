@@ -1,4 +1,5 @@
 import 'package:aplikasi_sholat_jurnal/nisha_register.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_dasboard.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +62,7 @@ class _NishaLoginState extends State<NishaLogin> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "MY LOVE APP",
+                  "LOGIN",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

@@ -60,25 +60,16 @@ class _NishaSplashScreenState extends State<NishaSplash> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Image(image: AssetImage('assets/images/ download (16) . jpg')),
-            SizedBox(height: 100,),
-            Text(
-              "Devoled by",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
+              SizedBox(height: 150),
+              ClipOval(
+                child: Image.asset(
+                  'assets/images/download (17).jpg',
+                  height: 200,
+                  width: 200,
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-            Text(
-              "NISHA",
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
+            ],
         ),
       ),
 
