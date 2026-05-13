@@ -121,7 +121,7 @@ class _NishaLoginState extends State<NishaLogin> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => TakimDasboard(),
+                            builder: (context) => TakimHome(),
                           ),
                         );
                       },

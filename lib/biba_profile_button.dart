@@ -13,7 +13,7 @@ class BibaProfileButton extends StatelessWidget {
           children: [
             ClipOval(
               child: Image.asset(
-                'assets/images/chlu.png',
+                'assets/images/.png',
                 width: 100,
                 height: 100,
                 fit: BoxFit.cover,
