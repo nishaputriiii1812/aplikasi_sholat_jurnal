@@ -1,47 +1,66 @@
+import 'package:aplikasi_sholat_jurnal/models/takim_item_page.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_jurnal.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_komunitas.dart';
 import 'package:flutter/material.dart';
 
-import 'takim_home.dart';
 
 class TakimDasboard extends StatefulWidget {
   const TakimDasboard({super.key});
 
   @override
-  State<TakimDasboard> createState() => _TakimDasboardState();
+  State<TakimDasboard> createState() => _TakimDashboardState();
 }
 
-class _TakimDasboardState extends State<TakimDasboard> {
-  int _currentIndex = 0;
+class _TakimDashboardState extends State<TakimDasboard> {
+  int selectedIndex = 0;
+  Map<int, TakimItemPage> pages = {
+    0: TakimItemPage(
+      page: TakimHome(),
+      icon: Icons.home,
+      label: 'HOME',
+      color: Colors.white,
+    ),
+    1: TakimItemPage(
+      page: TakimJurnal(),
+      icon: Icons.book,
+      label: 'JURNAL',
+      color: Colors.white,
+    ),
+    2: TakimItemPage(
+      page: TakimKomunitas(),
+      icon: Icons.people,
+      label: 'KOMUNITAS',
+      color: Colors.white,
+    ),
 
-  final List<Widget> _pages = [
-    TakimHome(),
-  ];
-
+  };
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_currentIndex],
-      bottomNavigationBar:
-      BottomNavigationBar(
-        currentIndex: _currentIndex,
-      selectedItemColor: Colors.blue,
-      unselectedItemColor: Colors.green,
-      onTap: (index) {
-        setState(() {
-          _currentIndex = index;
-        });
-      },
-        items:   [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),label: "Home",
-        ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.book),label: "Book",
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 10,
+        backgroundColor: Colors.blueAccent,
+        unselectedItemColor: Colors.blueGrey,
+        unselectedLabelStyle: TextStyle(color: Colors.blueAccent),
+        currentIndex: selectedIndex,
+        onTap: (value) {
+          setState(() {
+            selectedIndex = value;
+          });
+        },
+
+        items: pages.entries
+            .map(
+              (d) => BottomNavigationBarItem(
+            icon: Icon(d.value.icon),
+            label: d.value.label,
+            activeIcon: Icon(d.value.icon, color: Colors.black87),
           ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.people),label: "Komunitas",
-          ),
-        ],
+        )
+            .toList(),
       ),
+      body: pages[selectedIndex]!.page,
     );
   }
 }

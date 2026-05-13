@@ -1,4 +1,4 @@
-import 'package:aplikasi_sholat_jurnal/biba_notif.dart';
+import 'package:aplikasi_sholat_jurnal/widget/biba_notif.dart';
 import 'package:aplikasi_sholat_jurnal/biba_profile_page.dart';
 import 'package:flutter/material.dart';
 
