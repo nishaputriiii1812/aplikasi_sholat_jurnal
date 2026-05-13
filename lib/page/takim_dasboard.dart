@@ -1,6 +1,7 @@
+import 'package:aplikasi_sholat_jurnal/model/item_page.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
 import 'package:flutter/material.dart';
 
-import 'takim_home.dart';
 
 class TakimDasboard extends StatefulWidget {
   const TakimDasboard({super.key});
@@ -10,38 +11,47 @@ class TakimDasboard extends StatefulWidget {
 }
 
 class _TakimDasboardState extends State<TakimDasboard> {
-  int _currentIndex = 0;
-
-  final List<Widget> _pages = [
-    TakimHome(),
-  ];
-
+  int selectedIndex = 0;
+  Map<int,ItemPage> menu = {
+    0: ItemPage(
+        page: TakimDasboard(),
+        icon: Icons.home,
+        label: "rumah",
+        colors: Colors.black87,
+    ),
+    1: ItemPage(
+      page: TakimHome(),
+      icon: Icons.home,
+      label: "---",
+      colors: Colors.white,
+    ),
+  };
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_currentIndex],
-      bottomNavigationBar:
-      BottomNavigationBar(
-        currentIndex: _currentIndex,
-      selectedItemColor: Colors.blue,
-      unselectedItemColor: Colors.green,
-      onTap: (index) {
-        setState(() {
-          _currentIndex = index;
-        });
-      },
-        items:   [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),label: "Home",
-        ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.book),label: "Book",
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 10,
+        backgroundColor: Colors.blueAccent,
+        unselectedItemColor: Colors.white,
+        unselectedLabelStyle: TextStyle(color: Colors.white),
+        currentIndex: selectedIndex,
+        onTap: (value) {
+          setState(() {
+            selectedIndex = value;
+          });
+        },
+        items: menu.entries
+            .map(
+              (d) => BottomNavigationBarItem(
+            icon: Icon(d.value.icon),
+            label: d.value.label,
+            activeIcon: Icon(d.value.icon, color: Colors.orange),
           ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.people),label: "Komunitas",
-          ),
-        ],
+        )
+            .toList(),
       ),
+      body: menu[selectedIndex]!.page,
+
     );
   }
 }

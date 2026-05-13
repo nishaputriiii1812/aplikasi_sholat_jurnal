@@ -132,9 +132,9 @@ class _TakimHomeState extends State<TakimHome> {
               margin: EdgeInsets.all(16),
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.grey[100],
+                color: Colors.blueAccent[100],
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: Colors.grey.shade300),
+                border: Border.all(color: Colors.blue.shade300),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -151,7 +151,7 @@ class _TakimHomeState extends State<TakimHome> {
                   SizedBox(height: 8),
                   Text(
                     "QS. Al - Ankabut: 45",
-                    style: TextStyle(color: Colors.grey, fontSize: 13),
+                    style: TextStyle(color: Colors.black87, fontSize: 13),
                   ),
                 ],
               ),
