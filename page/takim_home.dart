@@ -37,26 +37,17 @@ class _TakimHomeState extends State<TakimHome> {
                       SizedBox(height: 4),
                       Text(
                         "Assallamualikum, Debi",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                        ),
+                        style: TextStyle(color: Colors.white, fontSize: 14),
                       ),
                       Text(
                         "X rpl 1",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                        ),
+                        style: TextStyle(color: Colors.white, fontSize: 14),
                       ),
                     ],
                   ),
                   Row(
                     children: [
-                      Icon(Icons.notifications,
-                          color: Colors.white,
-                          size: 28,
-                      ),
+                      Icon(Icons.notifications, color: Colors.white, size: 28),
                       SizedBox(width: 10),
                       CircleAvatar(
                         radius: 22,
