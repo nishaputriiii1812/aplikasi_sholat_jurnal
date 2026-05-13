@@ -22,7 +22,7 @@ class BibaProfileButton extends StatelessWidget {
             SizedBox(width: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text("Nisha"), Text("nishaaputrii20gmail.com")],
+              children: [Text(""), Text("")],
             ),
           ],
         ),
