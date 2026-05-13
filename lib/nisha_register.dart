@@ -1,4 +1,5 @@
 import 'package:aplikasi_sholat_jurnal/nisha_login.dart';
+import 'package:aplikasi_sholat_jurnal/nisha_pilih.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -151,6 +152,16 @@ class _NishaRegisterPageState extends State<NishaRegister> {
                         );
                       },
                       child:  Text('batal'),
+                    ),
+
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => NishaPilih()),
+                        );
+                      },
+                      child:  Text('pilih class'),
                     ),
                   ],
                 ),
