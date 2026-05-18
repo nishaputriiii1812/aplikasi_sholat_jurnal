@@ -1,4 +1,4 @@
-import 'package:aplikasi_sholat_jurnal/model/item_page.dart';
+import 'package:aplikasi_sholat_jurnal/models/item_page.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
 import 'package:flutter/material.dart';
 
