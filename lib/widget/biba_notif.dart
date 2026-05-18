@@ -1,6 +1,8 @@
 import 'package:aplikasi_sholat_jurnal/biba_detail_notif_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../service/biba_notif_service.dart';
+
 class BibaNotif extends StatefulWidget {
   const BibaNotif({super.key});
 
@@ -27,26 +29,26 @@ class _BibaNotifState extends State<BibaNotif> {
           itemBuilder: (context, x) {
             return ListTile(
               leading: Icon(Icons.notifications),
-              title: Text(notifications[x].judul),
+              title: Text(notications[x].judul),
               subtitle: Text(
-                notifications[x].isRead ? 'Sudah dibaca' : 'Belum dibaca',
+                notications[x].isRead ? 'Sudah dibaca' : 'Belum dibaca',
               ),
               trailing: Icon(
-                notifications[x].isRead
+                notications[x].isRead
                     ? Icons.check_circle
                     : Icons.radio_button_unchecked,
               ),
               onTap: () {
                 setState(() {
-                  notifications[x].isRead = true;
+                  notications[x].isRead = true;
                 });
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => BibaDetailNotifScreen(
-                      judul: notifications[x].judul,
-                      notifikasi: notifications[x].notifikasi,
-                      imageUrl: notifications[x].imageUrl,
+                      judul: notications[x].judul,
+                      notifikasi: notications[x].notifikasi,
+                      imageUrl: notications[x].imageUrl,
                     ),
                   ),
                 );
@@ -54,5 +56,6 @@ class _BibaNotifState extends State<BibaNotif> {
             );
           },
         ),
+    );
   }
 }

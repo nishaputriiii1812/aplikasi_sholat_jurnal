@@ -1,6 +1,6 @@
 import 'package:aplikasi_sholat_jurnal/models/biba_notif_model.dart';
 
-List<BibaNotifModels> n = [
+List<BibaNotifModels> notications = [
   BibaNotifModels(
     judul: 'WhatsApp',
     notifikasi: 'Vino bf chla',
