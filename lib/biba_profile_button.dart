@@ -30,7 +30,7 @@ class BibaProfileButton extends StatelessWidget {
           onPressed: () {},
           style: ButtonStyle(
             backgroundColor: WidgetStatePropertyAll(Colors.indigo),
-            fixedSize: WidgetStatePropertyAll(
+            shape: WidgetStatePropertyAll(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             ),
           ),

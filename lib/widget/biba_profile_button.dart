@@ -1,4 +1,4 @@
-import 'package:aplikasi_sholat_jurnal/biba_profile_page.dart';
+import 'package:aplikasi_sholat_jurnal/page/biba_profile_page.dart';
 import 'package:flutter/material.dart';
 
 class BibaProfileButton extends StatelessWidget {
