@@ -27,21 +27,7 @@ class _BibaNotifState extends State<BibaNotif> {
         body: ListView.builder(
             itemCount: notications.length,
           itemBuilder: (context, x) {
-            return ListTile(
-              leading: Icon(Icons.notifications),
-              title: Text(notications[x].judul),
-              subtitle: Text(
-                notications[x].isRead ? 'Sudah dibaca' : 'Belum dibaca',
-              ),
-              trailing: Icon(
-                notications[x].isRead
-                    ? Icons.check_circle
-                    : Icons.radio_button_unchecked,
-              ),
-              onTap: () {
-                setState(() {
-                  notications[x].isRead = true;
-                });
+
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -52,8 +38,6 @@ class _BibaNotifState extends State<BibaNotif> {
                     ),
                   ),
                 );
-              },
-            );
           },
         ),
     );
