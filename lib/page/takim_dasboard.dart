@@ -1,5 +1,7 @@
-import 'package:aplikasi_sholat_jurnal/models/item_page.dart';
+import 'package:aplikasi_sholat_jurnal/models/takim_item_page.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_jurnal.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_komunitas.dart';
 import 'package:flutter/material.dart';
 
 
@@ -7,24 +9,31 @@ class TakimDasboard extends StatefulWidget {
   const TakimDasboard({super.key});
 
   @override
-  State<TakimDasboard> createState() => _TakimDasboardState();
+  State<TakimDasboard> createState() => _TakimDashboardState();
 }
 
-class _TakimDasboardState extends State<TakimDasboard> {
+class _TakimDashboardState extends State<TakimDasboard> {
   int selectedIndex = 0;
-  Map<int,ItemPage> menu = {
-    0: ItemPage(
-        page: TakimDasboard(),
-        icon: Icons.home,
-        label: "rumah",
-        colors: Colors.black87,
-    ),
-    1: ItemPage(
+  Map<int, TakimItemPage> pages = {
+    0: TakimItemPage(
       page: TakimHome(),
       icon: Icons.home,
-      label: "---",
-      colors: Colors.white,
+      label: 'HOME',
+      color: Colors.white,
     ),
+    1: TakimItemPage(
+      page: TakimJurnal(),
+      icon: Icons.book,
+      label: 'JURNAL',
+      color: Colors.white,
+    ),
+    2: TakimItemPage(
+      page: TakimKomunitas(),
+      icon: Icons.people,
+      label: 'KOMUNITAS',
+      color: Colors.white,
+    ),
+
   };
   @override
   Widget build(BuildContext context) {
@@ -32,26 +41,26 @@ class _TakimDasboardState extends State<TakimDasboard> {
       bottomNavigationBar: BottomNavigationBar(
         elevation: 10,
         backgroundColor: Colors.blueAccent,
-        unselectedItemColor: Colors.white,
-        unselectedLabelStyle: TextStyle(color: Colors.white),
+        unselectedItemColor: Colors.blueGrey,
+        unselectedLabelStyle: TextStyle(color: Colors.blueAccent),
         currentIndex: selectedIndex,
         onTap: (value) {
           setState(() {
             selectedIndex = value;
           });
         },
-        items: menu.entries
+
+        items: pages.entries
             .map(
               (d) => BottomNavigationBarItem(
             icon: Icon(d.value.icon),
             label: d.value.label,
-            activeIcon: Icon(d.value.icon, color: Colors.orange),
+            activeIcon: Icon(d.value.icon, color: Colors.black87),
           ),
         )
             .toList(),
       ),
-      body: menu[selectedIndex]!.page,
-
+      body: pages[selectedIndex]!.page,
     );
   }
 }

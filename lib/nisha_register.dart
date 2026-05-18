@@ -3,7 +3,6 @@ import 'package:aplikasi_sholat_jurnal/nisha_pilih.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class NishaRegister extends StatefulWidget {
   const NishaRegister({super.key});
 
@@ -80,8 +79,7 @@ class _NishaRegisterPageState extends State<NishaRegister> {
                     hintText: "Username",
                     labelText: 'Username',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20
-                      ),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     prefix: Icon(Icons.person, color: Colors.teal),
                   ),
@@ -96,8 +94,7 @@ class _NishaRegisterPageState extends State<NishaRegister> {
                     hintText: "Nama",
                     labelText: 'nama panggilan',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20
-                      ),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     prefix: Icon(Icons.person, color: Colors.teal),
                   ),
@@ -114,8 +111,7 @@ class _NishaRegisterPageState extends State<NishaRegister> {
                     hintText: "password",
                     labelText: 'password kamu',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20
-                      ),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     prefix: Icon(Icons.lock, color: Colors.teal),
                     suffix: IconButton(onPressed: isSecure, icon: Icon(_icon)),
@@ -132,8 +128,7 @@ class _NishaRegisterPageState extends State<NishaRegister> {
                     hintText: "confirmasi",
                     labelText: 'password kamu',
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(20
-                      ),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     prefix: Icon(Icons.lock, color: Colors.teal),
                     suffix: IconButton(onPressed: isSecure, icon: Icon(_icon)),
@@ -143,7 +138,6 @@ class _NishaRegisterPageState extends State<NishaRegister> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -151,7 +145,7 @@ class _NishaRegisterPageState extends State<NishaRegister> {
                           MaterialPageRoute(builder: (context) => NishaLogin()),
                         );
                       },
-                      child:  Text('batal'),
+                      child: Text('batal'),
                     ),
 
                     ElevatedButton(
@@ -161,7 +155,7 @@ class _NishaRegisterPageState extends State<NishaRegister> {
                           MaterialPageRoute(builder: (context) => NishaPilih()),
                         );
                       },
-                      child:  Text('pilih class'),
+                      child: Text('pilih class'),
                     ),
                   ],
                 ),
