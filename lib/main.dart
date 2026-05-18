@@ -1,6 +1,8 @@
+import 'package:aplikasi_sholat_jurnal/nisha_splash.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main (){
+void main() {
   runApp(Nisha());
 }
 
@@ -14,6 +16,6 @@ class Nisha extends StatefulWidget {
 class _NishaState extends State<Nisha> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,);
+    return MaterialApp(debugShowCheckedModeBanner: false, home: NishaSplash());
   }
 }
