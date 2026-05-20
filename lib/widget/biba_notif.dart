@@ -1,7 +1,7 @@
-import 'package:aplikasi_sholat_jurnal/biba_detail_notif_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../service/biba_notif_service.dart';
+import 'biba_detail_notif_screen.dart';
 
 class BibaNotif extends StatefulWidget {
   const BibaNotif({super.key});
@@ -14,32 +14,42 @@ class _BibaNotifState extends State<BibaNotif> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.pinkAccent, Colors.redAccent],
-              ),
+      appBar: AppBar(
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.pinkAccent, Colors.redAccent],
             ),
           ),
-          title: Text('Notifikasi', style: TextStyle(color: Colors.white)),
         ),
-        body: ListView.builder(
-            itemCount: notications.length,
-          itemBuilder: (context, x) {
+        title: Text('Notifikasi', style: TextStyle(color: Colors.white)),
+      ),
+      body: ListView.builder(
+        itemCount: notifications.length,
+        itemBuilder: (context, x) {
+          return ListTile(
+            leading: Icon(Icons.notifications),
+            title: Text(notifications[x].judul),
 
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => BibaDetailNotifScreen(
-                      judul: notications[x].judul,
-                      notifikasi: notications[x].notifikasi,
-                      imageUrl: notications[x].imageUrl,
-                    ),
-                  ),
-                );
-          },
-        ),
+            trailing: Icon(
+              notifications[x].isRead
+                  ? Icons.check_circle
+                  : Icons.radio_button_unchecked,
+            ),
+            onTap: () {
+              setState(() {
+                notifications[x].isRead = true;
+              });
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => BibaDetailNotifScreen(),
+                ),
+              );
+            },
+          );
+        },
+      ),
     );
   }
 }

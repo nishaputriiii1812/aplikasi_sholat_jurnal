@@ -1,32 +1,32 @@
 import 'package:aplikasi_sholat_jurnal/models/biba_notif_model.dart';
 
-List<BibaNotifModels> notications = [
+List<BibaNotifModels> notifications = [
   BibaNotifModels(
-    judul: 'WhatsApp',
+    judul: 'siti',
     notifikasi: 'Vino bf chla',
     imageUrl:
-    'https://icons.iconarchive.com/icons/aha-soft/free-large-love/256/Wedding-Rings-icon.png',
+        'https://icons.iconarchive.com/icons/aha-soft/free-large-love/256/Wedding-Rings-icon.png',
     isRead: false,
   ),
   BibaNotifModels(
-    judul: 'Instagram',
+    judul: 'carmenita',
     notifikasi: 'Vino my mine gweh',
     imageUrl:
-    'https://icons.iconarchive.com/icons/aha-soft/free-large-love/256/Wedding-Rings-icon.png',
+        'https://icons.iconarchive.com/icons/aha-soft/free-large-love/256/Wedding-Rings-icon.png',
     isRead: false,
   ),
   BibaNotifModels(
-    judul: 'Tiktok',
+    judul: 'lyodra',
     notifikasi: 'Vino nanem sawit',
     imageUrl:
-    'https://icons.iconarchive.com/icons/aha-soft/free-large-love/256/Wedding-Rings-icon.png',
+        'https://icons.iconarchive.com/icons/aha-soft/free-large-love/256/Wedding-Rings-icon.png',
     isRead: false,
   ),
   BibaNotifModels(
-    judul: '',
+    judul: 'zulfa',
     notifikasi: 'Biba telah menikah dengan jeno',
     imageUrl:
-    'https://icons.iconarchive.com/icons/aha-soft/free-large-love/256/Wedding-Rings-icon.png',
+        'https://icons.iconarchive.com/icons/aha-soft/free-large-love/256/Wedding-Rings-icon.png',
     isRead: false,
   ),
 ];

@@ -18,31 +18,17 @@ class _BibaProfilePageState extends State<BibaProfilePage> {
       ),
       body: Column(
         children: [
-          Container(
-            height: 150,
-            width: size.width,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/'),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Column(
-              children: [
-                SizedBox(height: 90),
-                ClipOval(
-                  child: Image.asset(
-                    'assets/images/',
-                    height: 95,
-                    width: 95,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ],
+          ClipOval(
+            child: Image.asset(
+              'assets/images/karina.jpg',
+              height: 95,
+              width: 95,
+              fit: BoxFit.cover,
             ),
           ),
-          Text('biba'),
-          Text('biba@gmail.com'),
+
+          Text('carmen'),
+          Text('carmenita@gmail.com'),
         ],
       ),
     );
