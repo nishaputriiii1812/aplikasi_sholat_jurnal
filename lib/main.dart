@@ -1,3 +1,4 @@
+import 'package:aplikasi_sholat_jurnal/nisha_splash.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_dasboard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,6 @@ class Nisha extends StatefulWidget {
 class _NishaState extends State<Nisha> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: TakimDasboard());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: NishaSplash());
   }
 }
