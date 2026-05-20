@@ -74,7 +74,7 @@ class _TakimHomeState extends State<TakimHome> {
                         Text(
                           "DHUHUR - 11:55",
                           style: TextStyle(color: Colors.white,fontSize: 20,
-                            fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.bold,fontStyle: FontStyle.normal,
                           ),
                         ),
                         SizedBox(height: 6),
@@ -90,13 +90,12 @@ class _TakimHomeState extends State<TakimHome> {
                   Container(
                     width: 60,height: 60,
                     decoration: BoxDecoration(shape: BoxShape.circle,
-                      border: Border.all(color: Colors.white38,width: 3),
-                      color: Colors.white10,
+                      border: Border.all(color: Colors.white,width: 3),
+                      color: Colors.white,
                     ),
                     child: Image.asset(
                       "assets/images/gambar1.jpg",
-                      height: 10,cacheHeight: 50,
-                      cacheWidth: 50,
+                      height: 10,
                       width: 10,
                     ),
                   ),
@@ -113,9 +112,9 @@ class _TakimHomeState extends State<TakimHome> {
               ),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Ringkasan Hari ini: Jum'at 6 mei/26",
+                  Text("Centang sholat Hari ini: ",
                     style: TextStyle(
-                      color: Colors.white,fontStyle: FontStyle.italic,
+                      color: Colors.white,fontStyle: FontStyle.normal,
                       fontSize: 14,
                     ),
                   ),
