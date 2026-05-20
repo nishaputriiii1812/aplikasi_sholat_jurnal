@@ -10,6 +10,6 @@ class NishaPilih extends StatefulWidget {
 class _NishaPilihState extends State<NishaPilih> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Placeholder();
   }
 }

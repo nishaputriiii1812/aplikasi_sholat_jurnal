@@ -1,4 +1,3 @@
-import 'package:aplikasi_sholat_jurnal/nisha_splash.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_dasboard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
