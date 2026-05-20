@@ -1,7 +1,7 @@
-import 'package:aplikasi_sholat_jurnal/models/takim_item_page.dart';
-import 'package:aplikasi_sholat_jurnal/page/takim_komunitas.dart';
+import 'package:aplikasi_sholat_jurnal/models/nisha_item_page.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_jurnal.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_komunitas.dart';
 import 'package:flutter/material.dart';
 
 
@@ -14,20 +14,20 @@ class TakimDasboard extends StatefulWidget {
 
 class _TakimDashboardState extends State<TakimDasboard> {
   int selectedIndex = 0;
-  Map<int, TakimItemPage> pages = {
-    0: TakimItemPage(
+  Map<int, NishaItemPage> pages = {
+    0: NishaItemPage(
       page: TakimHome(),
       icon: Icons.home,
       label: 'HOME',
       color: Colors.white,
     ),
-    1: TakimItemPage(
+    1: NishaItemPage(
       page: TakimJurnal(),
       icon: Icons.book,
       label: 'JURNAL',
       color: Colors.white,
     ),
-    2: TakimItemPage(
+    2: NishaItemPage(
       page: TakimKomunitas(),
       icon: Icons.people,
       label: 'KOMUNITAS',

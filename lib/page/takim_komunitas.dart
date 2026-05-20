@@ -10,6 +10,6 @@ class TakimKomunitas extends StatefulWidget {
 class _TakimKomunitasState extends State<TakimKomunitas> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold();
   }
 }
