@@ -82,7 +82,7 @@ class _TakimJurnalState extends State<TakimJurnal> {
                               ),
                             ),
                             Text(
-                              '${tanggalList[index]}',
+                              "${tanggalList[index]}",
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -105,8 +105,8 @@ class _TakimJurnalState extends State<TakimJurnal> {
                 ),
                 child: Row(children: [
                   Checkbox(value: shubuhSudah,
-                    onChanged: (val) {
-                      setState(() { shubuhSudah = val!; });
+                    onChanged: (v) {
+                      setState(() { shubuhSudah = v!; });
                     },
                   ),
                   Text("Shubuh (04:55)"),
@@ -123,8 +123,8 @@ class _TakimJurnalState extends State<TakimJurnal> {
                   children: [
                     Checkbox(
                       value: dzuhurSudah,
-                      onChanged: (val) {
-                        setState(() {dzuhurSudah = val!; });
+                      onChanged: (v) {
+                        setState(() {dzuhurSudah = v!; });
                       },
                     ),
                     Text("Dzuhur (12:25)"),
@@ -141,9 +141,9 @@ class _TakimJurnalState extends State<TakimJurnal> {
                   children: [
                     Checkbox(
                       value: asharSudah,
-                      onChanged: (val) {
+                      onChanged: (v) {
                         setState(() {
-                          asharSudah = val!;
+                          asharSudah = v!;
                         });
                       },
                     ),
@@ -160,8 +160,8 @@ class _TakimJurnalState extends State<TakimJurnal> {
                 child: Row(
                   children: [
                     Checkbox(value: maghribSudah,
-                      onChanged: (val) {
-                        setState(() { maghribSudah= val!; });
+                      onChanged: (v) {
+                        setState(() { maghribSudah= v!; });
                       },
                     ),
                     Text("Maghrib (18:10)"),
@@ -179,9 +179,9 @@ class _TakimJurnalState extends State<TakimJurnal> {
                   children: [
                     Checkbox(
                       value: isyaSudah,
-                      onChanged: (val) {
+                      onChanged: (v) {
                         setState(() {
-                          isyaSudah = val!;
+                          isyaSudah = v!;
                         });
                       },
                     ),
@@ -208,8 +208,8 @@ class _TakimJurnalState extends State<TakimJurnal> {
                   children: [
                     Checkbox(
                       value: dhuhaSudah,
-                      onChanged: (val) {
-                        setState(() { dhuhaSudah = val!;
+                      onChanged: (v) {
+                        setState(() { dhuhaSudah = v!;
                         });
                       },
                     ),
@@ -226,9 +226,9 @@ class _TakimJurnalState extends State<TakimJurnal> {
                 child: Row(
                   children: [
                     Checkbox(value: tahajjudSudah,
-                      onChanged: (val) {
+                      onChanged: (v) {
                         setState(() {
-                          tahajjudSudah = val!; });
+                          tahajjudSudah = v!; });
                       },
                     ),
                     Text("Tahajud"),

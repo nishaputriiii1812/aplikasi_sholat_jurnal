@@ -33,7 +33,6 @@ class _TakimDashboardState extends State<TakimDasboard> {
       label: 'KOMUNITAS',
       color: Colors.white,
     ),
-
   };
   @override
   Widget build(BuildContext context) {
