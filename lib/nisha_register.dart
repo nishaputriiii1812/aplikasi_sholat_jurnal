@@ -1,5 +1,5 @@
 import 'package:aplikasi_sholat_jurnal/nisha_login.dart';
-import 'package:aplikasi_sholat_jurnal/nisha_pilih.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -29,6 +29,20 @@ class _NishaRegisterPageState extends State<NishaRegister> {
     });
   }
 
+  List<DropdownMenuEntry<int>> pilih = [
+    DropdownMenuEntry(value: 0, label: 'X RPL 1'),
+    DropdownMenuEntry(value: 0, label: 'X RPL 2'),
+    DropdownMenuEntry(value: 0, label: 'X TKJ 1'),
+    DropdownMenuEntry(value: 0, label: 'X TKJ 2'),
+    DropdownMenuEntry(value: 0, label: 'X TKJ 3'),
+    DropdownMenuEntry(value: 0, label: 'X TKJ 4'),
+    DropdownMenuEntry(value: 0, label: 'X DPIB'),
+    DropdownMenuEntry(value: 0, label: 'X DKV 1'),
+    DropdownMenuEntry(value: 0, label: 'X DKV 2'),
+    DropdownMenuEntry(value: 0, label: 'X DKV 3'),
+    DropdownMenuEntry(value: 0, label: 'X DKV 4'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +52,7 @@ class _NishaRegisterPageState extends State<NishaRegister> {
         padding: const EdgeInsets.all(50),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/gamabar.jpg'),
+            image: AssetImage('assets/images/download (15).jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -152,12 +166,22 @@ class _NishaRegisterPageState extends State<NishaRegister> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => NishaPilih()),
+                          MaterialPageRoute(builder: (context) => TakimHome()),
                         );
                       },
-                      child: Text('pilih class'),
+                      child: Text('masuk'),
                     ),
                   ],
+                ),
+                DropdownMenu(
+                  menuHeight: 110,
+                  textStyle: TextStyle(),
+                  inputDecorationTheme: InputDecorationTheme(
+                    suffixIconColor: Colors.blueGrey,
+                    filled: true,fillColor: Colors.blueAccent,
+                    hintStyle: TextStyle(color: Colors.white),
+                  ),
+                  dropdownMenuEntries: [],
                 ),
               ],
             ),

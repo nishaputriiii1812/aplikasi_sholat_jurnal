@@ -37,7 +37,7 @@ class _NishaLoginState extends State<NishaLogin> {
         padding: const EdgeInsets.all(50),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/gamabar.jpg'),
+            image: AssetImage('assets/images/download (15).jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -121,7 +121,7 @@ class _NishaLoginState extends State<NishaLogin> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => TakimHome(),
+                            builder: (context) => TakimDasboard(),
                           ),
                         );
                       },

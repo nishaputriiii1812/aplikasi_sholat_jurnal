@@ -16,7 +16,7 @@ class _NishaSplashScreenState extends State<NishaSplash> {
   @override
   void initState() {
     n = Timer.periodic(
-      const Duration(seconds: 10),
+      const Duration(seconds: 2),
           (timer) => Navigator.pushReplacement( 
         context,
         MaterialPageRoute(builder: (context) => NishaLogin()),

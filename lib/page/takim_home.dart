@@ -11,7 +11,7 @@ class TakimHome extends StatefulWidget {
 
 class _TakimHomeState extends State<TakimHome> {
   final List<bool> sholat = [true, true, false, false, false];
-  final List<String> namaWaktu = ['Subuh', 'Dzuhur', 'Ashar', 'Maghrib', 'Isya'];
+  final List<String> namaWaktu = ["Subuh", "Dzuhur", "Ashar", "Maghrib", "Isya"];
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,6 @@ class _TakimHomeState extends State<TakimHome> {
         flexibleSpace: Container(
           padding:  EdgeInsets.all(50),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(75),
             gradient:  LinearGradient(
               colors: [Colors.blue,Colors.blueAccent],
             ),
@@ -74,14 +73,14 @@ class _TakimHomeState extends State<TakimHome> {
                         Text(
                           "DHUHUR - 11:55",
                           style: TextStyle(color: Colors.white,fontSize: 20,
-                            fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.bold,fontStyle: FontStyle.normal,
                           ),
                         ),
                         SizedBox(height: 6),
                         Text(
                           "Kurang 15 Menit",
                           style: TextStyle(
-                            color: Colors.white70,fontSize: 13,
+                            color: Colors.white,fontSize: 13,
                           ),
                         ),
                       ],
@@ -90,13 +89,12 @@ class _TakimHomeState extends State<TakimHome> {
                   Container(
                     width: 60,height: 60,
                     decoration: BoxDecoration(shape: BoxShape.circle,
-                      border: Border.all(color: Colors.white38,width: 3),
-                      color: Colors.white10,
+                      border: Border.all(color: Colors.white,width: 3),
+                      color: Colors.white,
                     ),
                     child: Image.asset(
                       "assets/images/gambar1.jpg",
-                      height: 10,cacheHeight: 50,
-                      cacheWidth: 50,
+                      height: 10,
                       width: 10,
                     ),
                   ),
@@ -113,9 +111,9 @@ class _TakimHomeState extends State<TakimHome> {
               ),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Ringkasan Hari ini: Jum'at 6 mei/26",
+                  Text("Centang sholat Hari ini: ",
                     style: TextStyle(
-                      color: Colors.white,fontStyle: FontStyle.italic,
+                      color: Colors.white,fontStyle: FontStyle.normal,
                       fontSize: 14,
                     ),
                   ),
@@ -128,9 +126,9 @@ class _TakimHomeState extends State<TakimHome> {
                         child: Container(
                           width: 50,height: 50,
                           decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: sholat[index] ? Colors.green : Colors.white24,
-                            border: Border.all(color: sholat[index] ? Colors.green : Colors.white,width: 2,),),
+                            shape: BoxShape.rectangle,
+                            color: sholat[index] ? Colors.green : Colors.white,
+                            border: Border.all(color: sholat[index] ? Colors.green : Colors.blue,width: 2,),),
                           child: sholat[index] ? Icon(Icons.check_circle_outlined,color: Colors.white,size: 22) : null,),);
                     }),),
                   SizedBox(height: 8),
@@ -158,12 +156,12 @@ class _TakimHomeState extends State<TakimHome> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Kutipan Hari ini: ",
-                    style: TextStyle(color: Colors.black54,fontStyle: FontStyle.normal,fontSize: 13,),),
+                    style: TextStyle(color: Colors.black,fontStyle: FontStyle.normal,fontSize: 13,),),
                   SizedBox(height: 8),
                   Text("Sesungguhnya sholat itu mencegah dari perbuatan dosa yang mendekat",
                     style: TextStyle(color: Colors.greenAccent,fontWeight: FontWeight.w600,fontSize: 15,),),
                   SizedBox(height: 8),
-                  Text("QS.Al-Ankabut: 45",style: TextStyle(color: Colors.black54,fontSize: 13,
+                  Text("QS.Al-Ankabut: 45",style: TextStyle(color: Colors.black,fontSize: 13,
                   ),
                   ),
                 ],

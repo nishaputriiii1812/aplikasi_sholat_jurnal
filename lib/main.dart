@@ -17,6 +17,6 @@ class Nisha extends StatefulWidget {
 class _NishaState extends State<Nisha> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: TakimDasboard());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: NishaSplash());
   }
 }
