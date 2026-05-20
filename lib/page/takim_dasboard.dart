@@ -1,7 +1,7 @@
 import 'package:aplikasi_sholat_jurnal/models/nisha_item_page.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_jurnal.dart';
-import 'package:aplikasi_sholat_jurnal/page/takim_komunitas.dart';
+import 'package:aplikasi_sholat_jurnal/page/nisha_komunitas.dart';
 import 'package:flutter/material.dart';
 
 
@@ -28,7 +28,7 @@ class _TakimDashboardState extends State<TakimDasboard> {
       color: Colors.white,
     ),
     2: NishaItemPage(
-      page: TakimKomunitas(),
+      page: NishaKomunitas(),
       icon: Icons.people,
       label: 'KOMUNITAS',
       color: Colors.white,
