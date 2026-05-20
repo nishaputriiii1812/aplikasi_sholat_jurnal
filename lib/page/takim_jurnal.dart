@@ -19,10 +19,10 @@ class _TakimJurnalState extends State<TakimJurnal> {
   bool tahajjudSudah = false;
 
   TextEditingController refleksiController = TextEditingController();
-  List<String> hariSngkt = ['Rab','Kam','Jum','Sab', 'Ming'];
-  List<String> hariPnjng = ['Rabu', 'Kamis','Jumat','Sabtu','Minggu' ];
+  List<String> hariSngkt = ["Rab","Kam","Jum","Sab", "Ming"];
+  List<String> hariPnjng = ["Rabu", "Kamis","Jumat","Sabtu","Minggu" ];
   List<int> tanggalList = [22,23,24,25,26];
-  void _resetHari() {
+  void _refreshHari() {
     shubuhSudah = false;
     dzuhurSudah = false;
     asharSudah = false;
@@ -32,7 +32,6 @@ class _TakimJurnalState extends State<TakimJurnal> {
     tahajjudSudah = false;
     refleksiController.clear();
   }
-
   @override
   void dispose() {
     refleksiController.dispose();
@@ -51,7 +50,7 @@ class _TakimJurnalState extends State<TakimJurnal> {
                 width: double.infinity,
                 padding: EdgeInsets.all(12),
                 child: Text(
-                  '${hariPnjng[selectedHari]}, ${tanggalList[selectedHari]} APRIL 2026',
+                  "${hariPnjng[selectedHari]}, ${tanggalList[selectedHari]} APRIL 2026",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white,
                     fontSize: 18,fontWeight: FontWeight.bold,
@@ -63,11 +62,11 @@ class _TakimJurnalState extends State<TakimJurnal> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: List.generate(5, (index) {
-                    bool isSelected = selectedHari == index;
+                    bool _ = selectedHari == index;
                     return GestureDetector(
                       onTap: () {
                         setState(() {
-                          _resetHari();
+                          _refreshHari();
                           selectedHari = index;
                         });
                       },
@@ -79,13 +78,13 @@ class _TakimJurnalState extends State<TakimJurnal> {
                           children: [
                             Text(hariSngkt[index],
                               style: TextStyle(
-                                color: isSelected ? Colors.white : Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                             Text(
                               '${tanggalList[index]}',
                               style: TextStyle(
-                                color: isSelected ? Colors.white : Colors.black,
+                                color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
                               ),
@@ -110,7 +109,7 @@ class _TakimJurnalState extends State<TakimJurnal> {
                       setState(() { shubuhSudah = val!; });
                     },
                   ),
-                  Text('Shubuh (04:55)'),
+                  Text("Shubuh (04:55)"),
                 ],
                 ),
               ),
@@ -128,7 +127,7 @@ class _TakimJurnalState extends State<TakimJurnal> {
                         setState(() {dzuhurSudah = val!; });
                       },
                     ),
-                    Text('Dzuhur (12:25)'),
+                    Text("Dzuhur (12:25)"),
                   ],
                 ),
               ),
@@ -148,7 +147,7 @@ class _TakimJurnalState extends State<TakimJurnal> {
                         });
                       },
                     ),
-                    Text('Ashar (15:15)'),
+                    Text("Ashar (15:15)"),
                   ],
                 ),
               ),
@@ -165,7 +164,7 @@ class _TakimJurnalState extends State<TakimJurnal> {
                         setState(() { maghribSudah= val!; });
                       },
                     ),
-                    Text('Maghrib (18:10)'),
+                    Text("Maghrib (18:10)"),
                   ],
                 ),
               ),
@@ -190,12 +189,11 @@ class _TakimJurnalState extends State<TakimJurnal> {
                   ],
                 ),
               ),
-
               SizedBox(height: 8),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 12),
                 width: double.infinity,
-                child: Text('Sunnah',
+                child: Text("Sunnah",
                   style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,),
                 ),
               ),
@@ -215,7 +213,7 @@ class _TakimJurnalState extends State<TakimJurnal> {
                         });
                       },
                     ),
-                    Text('Dhuha'),
+                    Text("Dhuha"),
                   ],
                 ),
               ),
@@ -233,7 +231,7 @@ class _TakimJurnalState extends State<TakimJurnal> {
                           tahajjudSudah = val!; });
                       },
                     ),
-                    Text('Tahajjud'),
+                    Text("Tahajud"),
                   ],
                 ),
               ),
@@ -248,16 +246,16 @@ class _TakimJurnalState extends State<TakimJurnal> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Refleksi',
+                    Text("Refleksi",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,fontSize: 15,),
                     ),
                     SizedBox(height: 6),
                     TextField(
                       controller: refleksiController,
-                      maxLines: 4,
+                      maxLines: 2,
                       decoration: InputDecoration(
-                        hintText: 'Refleksi hari ini...',
+                        hintText: "Refleksi hari ini..",
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -268,13 +266,13 @@ class _TakimJurnalState extends State<TakimJurnal> {
                         onPressed: () {
                           FocusScope.of(context).unfocus();
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text('Refleksi disimpan!')),
+                            SnackBar(content: Text("Refleksi disimpan!")),
                           );
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
                         ),
-                        child: Text('Simpan',
+                        child: Text("Simpan",
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
