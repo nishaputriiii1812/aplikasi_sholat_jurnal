@@ -1,7 +1,7 @@
 import 'package:aplikasi_sholat_jurnal/models/takim_item_page.dart';
+import 'package:aplikasi_sholat_jurnal/page/takim_komunitas.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_home.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_jurnal.dart';
-import 'package:aplikasi_sholat_jurnal/page/takim_komunitas.dart';
 import 'package:flutter/material.dart';
 
 
