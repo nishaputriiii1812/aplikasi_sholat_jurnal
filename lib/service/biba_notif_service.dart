@@ -2,25 +2,25 @@ import 'package:aplikasi_sholat_jurnal/models/biba_notif_model.dart';
 
 List<BibaNotifModels> notifications = [
   BibaNotifModels(
-    judul: 'siti',
+    judul: 'carmenita',
     notifikasi: 'menjadi guru',
     imageUrl: '',
     isRead: false,
   ),
   BibaNotifModels(
-    judul: 'carmenita',
+    judul: 'Nia Safitri',
     notifikasi: 'diterima menjadi idol k-pop',
     imageUrl: '',
     isRead: false,
   ),
   BibaNotifModels(
-    judul: 'lyodra',
+    judul: 'Maya Anika',
     notifikasi: 'diterima snbp',
     imageUrl: '',
     isRead: false,
   ),
   BibaNotifModels(
-    judul: 'zulfa',
+    judul: 'Amanda Zoya',
     notifikasi: 'menjadi model baju',
     imageUrl: '',
     isRead: false,
