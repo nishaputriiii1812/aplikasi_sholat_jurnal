@@ -23,7 +23,7 @@ class _TakimKomunitasState extends State<TakimKomunitas> {
             ),
             const SizedBox(height: 24),
             Text(
-              'Masih Belum',
+              "Masih Belum",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 32,
@@ -34,7 +34,7 @@ class _TakimKomunitasState extends State<TakimKomunitas> {
             ),
             const SizedBox(height: 12),
             Text(
-              'Halaman ini sedang dalam proses pengerjaan.',
+              "Halaman ini masi Belum.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14,

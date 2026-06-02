@@ -16,20 +16,24 @@ class _BibaProfilePageState extends State<BibaProfilePage> {
         backgroundColor: Colors.indigo,
         title: Row(children: [Text('Profile')]),
       ),
-      body: Column(
-        children: [
-          ClipOval(
-            child: Image.asset(
-              'assets/images/karina.jpg',
-              height: 95,
-              width: 95,
-              fit: BoxFit.cover,
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(height: 14),
+            ClipOval(
+              child:
+              Image.asset(
+                'assets/images/karina.jpg',
+                height: 95,
+                width: 95,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
 
-          Text('carmen'),
-          Text('carmenita@gmail.com'),
-        ],
+            Text('carmen'),
+            Text('carmenita@gmail.com'),
+          ],
+        ),
       ),
     );
   }

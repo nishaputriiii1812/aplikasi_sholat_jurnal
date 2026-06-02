@@ -4,8 +4,6 @@ import 'package:aplikasi_sholat_jurnal/page/takim_jurnal.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_komunitas.dart';
 import 'package:flutter/material.dart';
 
-import '../models/nisha_item_page.dart';
-
 class TakimDasboard extends StatefulWidget {
   const TakimDasboard({super.key});
 
@@ -39,11 +37,8 @@ class _TakimDashboardState extends State<TakimDasboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 10,
-        backgroundColor: Colors.blueAccent,
-        unselectedItemColor: Colors.blueGrey,
-        unselectedLabelStyle: TextStyle(color: Colors.blueAccent),
-        currentIndex: selectedIndex,
+        elevation: 10, backgroundColor: Colors.blueAccent, unselectedItemColor: Colors.blueGrey,
+        unselectedLabelStyle: TextStyle(color: Colors.blueAccent), currentIndex: selectedIndex,
         onTap: (value) {
           setState(() {
             selectedIndex = value;
