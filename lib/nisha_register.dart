@@ -77,7 +77,7 @@ class _NishaRegisterPageState extends State<NishaRegister> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "MY LOVE APP",
+                  "DAFTAR",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
