@@ -147,8 +147,8 @@ class _TakimHomeState extends State<TakimHome> {
                     ),
                   ),
                   Container(
-                    width: 60,
-                    height: 60,
+                    width: 55,
+                    height: 55,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       border: Border.all(color: Colors.white, width: 3),
