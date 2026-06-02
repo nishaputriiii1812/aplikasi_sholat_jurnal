@@ -4,6 +4,7 @@ import 'package:aplikasi_sholat_jurnal/page/takim_jurnal.dart';
 import 'package:aplikasi_sholat_jurnal/page/takim_komunitas.dart';
 import 'package:flutter/material.dart';
 
+import '../models/nisha_item_page.dart';
 
 class TakimDasboard extends StatefulWidget {
   const TakimDasboard({super.key});
@@ -33,7 +34,6 @@ class _TakimDashboardState extends State<TakimDasboard> {
       label: 'KOMUNITAS',
       color: Colors.white,
     ),
-
   };
   @override
   Widget build(BuildContext context) {
@@ -53,11 +53,11 @@ class _TakimDashboardState extends State<TakimDasboard> {
         items: pages.entries
             .map(
               (d) => BottomNavigationBarItem(
-            icon: Icon(d.value.icon),
-            label: d.value.label,
-            activeIcon: Icon(d.value.icon, color: Colors.black87),
-          ),
-        )
+                icon: Icon(d.value.icon),
+                label: d.value.label,
+                activeIcon: Icon(d.value.icon, color: Colors.black87),
+              ),
+            )
             .toList(),
       ),
       body: pages[selectedIndex]!.page,
